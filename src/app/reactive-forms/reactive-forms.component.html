@@ -1,0 +1,32 @@
+<section>
+    <form [formGroup]="cadastroForm" (ngSubmit)="submitForm()">
+
+        <label>
+            Nome
+            <br>
+            <input type="text" formControlName="primeiroNome">
+            <br><br>
+            <span *ngIf="cadastroForm.get('primeiroNome')?.errors && (cadastroForm.get('primeiroNome')?.touched || cadastroForm.get('primeiroNome')?.dirty)">
+                Por favor preencha o campo com seu nome
+            </span>
+        </label>
+        <br><br>
+
+        <label>
+            Sobrenome
+            <br>
+            <input type="text" formControlName="segundoNome">
+        </label>
+       
+        <br>
+        
+        <p>
+            {{cadastroForm.get('primeiroNome')?.value}} {{cadastroForm.get('segundoNome')?.value}}
+        </p>
+    
+        <br>
+    
+        <button>Eniviar</button>
+    </form>
+    
+</section>
