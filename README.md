@@ -12,7 +12,7 @@
 
   <br>
 
-  <p align="middle">
+  <p align="center">
   <img width="200" alt="QuebraDeLinha" src="https://media.discordapp.net/attachments/783761333358166056/875852044928425984/divider-2461548_640.png">
   </p>
   
