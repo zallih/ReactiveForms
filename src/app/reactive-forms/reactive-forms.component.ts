@@ -18,6 +18,9 @@ export class ReactiveFormsComponent {
   }
 
   public submitForm(){
-    console.log(this.cadastroForm.value);
+
+    if(this.cadastroForm.valid){
+      console.log(this.cadastroForm.value);
+    }
   }
 }
