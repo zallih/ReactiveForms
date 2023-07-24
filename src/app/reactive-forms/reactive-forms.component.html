@@ -1,6 +1,7 @@
 <section>
     <form [formGroup]="cadastroForm" (ngSubmit)="submitForm()">
-
+        <h1>Entrar</h1>
+        <br>
         <label>
             Nome
             <br>
@@ -15,7 +16,12 @@
         <label>
             Sobrenome
             <br>
-            <input type="text" formControlName="segundoNome">
+            <input type="text" formControlName="segundoNome" maxLength="15">
+            <br><br>
+            <span *ngIf="cadastroForm.get('segundoNome')?.errors && (cadastroForm.get('segundoNome')?.touched || cadastroForm.get('segundoNome')?.dirty)">
+                Por favor deve ter no minimo 3 letras
+                <!-- {{cadastroForm.get('segundoNome')?.errors?.minlength?.requiredLength}} -->
+            </span>
         </label>
        
         <br>

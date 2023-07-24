@@ -11,7 +11,7 @@ export class ReactiveFormsComponent {
 
   public cadastroForm: FormGroup = this.formBuilder.group({
     primeiroNome: ['', Validators.required],
-    segundoNome: [''],
+    segundoNome: ['', [Validators.required, Validators.minLength(3)]],
   });
 
   constructor(private formBuilder: FormBuilder){
