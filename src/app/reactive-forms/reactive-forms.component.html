@@ -11,7 +11,7 @@
                 Por favor preencha o campo com seu nome
             </span>
         </label>
-        <br><br>
+        <br>
 
         <label>
             Sobrenome
@@ -26,8 +26,21 @@
        
         <br>
         
+
+        <br>
+
+        <label>
+            Email
+            <br>
+            <input type="email" formControlName="email" >
+        </label>
+       
+        <br>
+
         <p>
-            {{cadastroForm.get('primeiroNome')?.value}} {{cadastroForm.get('segundoNome')?.value}}
+            Nome: {{cadastroForm.get('primeiroNome')?.value}} {{cadastroForm.get('segundoNome')?.value}}
+            <br>
+            Email: {{cadastroForm.get('email')?.value}}
         </p>
     
         <br>
