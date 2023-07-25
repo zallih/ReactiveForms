@@ -12,7 +12,7 @@ export class ReactiveFormsComponent {
   public cadastroForm: FormGroup = this.formBuilder.group({
     primeiroNome: ['', Validators.required],
     segundoNome: ['', [Validators.required, Validators.minLength(3)]],
-    email: ['', Validators.required, Validators.email]
+    email: ['', Validators.required]
   });
 
   constructor(private formBuilder: FormBuilder){
@@ -22,6 +22,6 @@ export class ReactiveFormsComponent {
 
     if(this.cadastroForm.valid){
       console.log(this.cadastroForm.value);
-    }
+    } 
   }
 }
